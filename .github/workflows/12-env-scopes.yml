@@ -23,6 +23,4 @@ jobs:
 
       # Dump the ENTIRE github context as JSON — great for debugging/learning
       - name: Dump full github context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
+        run: echo "${{ toJSON(github) }}"
